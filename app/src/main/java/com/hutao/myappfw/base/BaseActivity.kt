@@ -60,7 +60,7 @@ abstract class BaseActivity : SwipeBackActivity() , IGetPageName{
      * 默认开启左滑关闭界面 ，不需要 子类可以继承重写
      * @return Boolean
      */
-    protected fun swipeBackEnable(): Boolean = true
+    protected open fun swipeBackEnable(): Boolean = true
 
     /**
      * 添加Disposable
@@ -69,4 +69,5 @@ abstract class BaseActivity : SwipeBackActivity() , IGetPageName{
     protected fun addDisposable(disposable: Disposable){
         compositeDisposable.add(disposable)
     }
+
 }
