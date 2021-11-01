@@ -21,7 +21,7 @@ class FwApplication : Application(){
     /**
      * 单例模式：静态instant
      */
-    companion object{
+    companion  object{
         lateinit var instant : Application
     }
 

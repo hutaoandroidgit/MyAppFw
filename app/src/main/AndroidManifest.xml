@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <application
-        android:name=".FwApplication"
+        android:name="com.hutao.myappfw.FwApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,7 +20,7 @@
         tools:replace="android:allowBackup,android:networkSecurityConfig,android:supportsRtl"
         tools:targetApi="n">
         <activity
-            android:name=".module.main.MainActivity"
+            android:name="com.hutao.myappfw.module.main.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ActivityTheme">
             <intent-filter>
@@ -32,6 +32,12 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}" />
+        <service
+            android:name="com.hutao.myappfw.service.MyService">
+            <intent-filter>
+                <action android:name="com.hutao.myappfw.aidlService"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
