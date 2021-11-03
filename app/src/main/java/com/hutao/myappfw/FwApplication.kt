@@ -3,6 +3,8 @@ package com.hutao.myappfw
 import android.app.Application
 import android.content.Context
 import com.hutao.myappfw.persistence.FwKeyValue
+import com.hutao.myappfw.persistence.FwKeyValue.init
+import com.hutao.myappfw.util.log.FwLog
 
 /**
  * @ProjectName: MyAppFw
@@ -40,5 +42,7 @@ class FwApplication : Application(){
         //应用初始化操作
         //初始化MMKV
         FwKeyValue.init(this);
+        //初始化日志配置
+        FwLog.init(this);
     }
 }

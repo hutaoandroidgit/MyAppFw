@@ -175,4 +175,9 @@ dependencies {
 
     // 加载动画
     implementation("com.ldoublem.loadingview:loadingviewlib:${versions.loadingview}")
+
+    //打印模块
+    debugImplementation ("com.apkfuns.logutils:library:${versions.logutils}")
+    releaseImplementation ("com.apkfuns.logutils:logutils-no-op:${versions.logutils_no_op}")
+    implementation ("com.apkfuns.log2file:log2file:${versions.log2file}")
 }
